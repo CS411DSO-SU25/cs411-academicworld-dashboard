@@ -1,0 +1,6 @@
+dash
+pandas
+plotly
+mysql-connector-python
+pymongo
+requests
