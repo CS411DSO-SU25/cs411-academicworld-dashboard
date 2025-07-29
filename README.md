@@ -381,7 +381,6 @@ Foreign key fields were indexed in the MySQL schema to speed up join and aggrega
 **Example (MySQL):**
 ```sql
 CREATE INDEX idx_faculty_university_id ON faculty(university_id);
--- See AcademicWorld.sql for all index definitions.
 ```
 
 **Neo4j:**  
@@ -458,11 +457,22 @@ All MySQL queries use prepared statements, making them safe from SQL injection a
   Security (prevents SQL injection), efficiency, and safe parameter handling.
 
 - **Code Location:**  
-  - See `utils.py` (`get_mysql_cursor()`), and every `.execute(...)` statement in `widget1.py`, `widget2.py`, etc.
+  - See `widget3.py` (`update_pie`), and every `.execute(...)` statement in `widget1.py`, `widget2.py`, etc.
 
 **Example (Python, `utils.py` and widget code):**
 ```python
-cursor.execute("SELECT * FROM faculty WHERE name = %s", (faculty_name,))
+            sql = (
+                "SELECT keyword, SUM(faculty_count) as faculty_count "
+                "FROM faculty_keyword_summary_view "
+                "GROUP BY keyword "
+                "ORDER BY faculty_count DESC LIMIT 10"
+            )
+
+        conn, cur = get_mysql_cursor()
+        cur.execute(sql, tuple(params))
+        rows = cur.fetchall()
+        cur.close()
+        conn.close()
 ```
 
 ---
