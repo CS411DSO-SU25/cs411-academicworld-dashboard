@@ -382,7 +382,7 @@ Foreign key fields were indexed in the MySQL schema to speed up join and aggrega
 ```sql
 CREATE INDEX idx_faculty_university_id ON faculty(university_id);
 ```
-![SQL INDEX](screenshots/sql_index.png)
+![SQL INDEX](screenshots/mysql_index.png)
 
 **Neo4j:**  
 Indexes created for efficient lookup of nodes, particularly on `FACULTY.name` and `PUBLICATION.id`.
