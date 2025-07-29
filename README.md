@@ -64,8 +64,8 @@ _The demo covers:_
 
 1. **Clone the repository:**
    ```bash
-   git clone <your-github-repo-url> ## TO BE DONE
-   cd <your-project-folder> TO BE DONE
+   [GitHub Repository](https://github.com/CS411DSO-SU25/cs411-academicworld-dashboard)
+   cd cs411-academicworld-dashboard
    ```
 
 2. **Install Python dependencies:**
