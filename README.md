@@ -483,14 +483,19 @@ When a user updates a faculty profile or research interests, those changes are w
 
 **Example (Python, from `widget6.py`):**
 ```python
-# Update in MySQL
-cursor.execute("UPDATE faculty SET research_interest = %s WHERE name = %s", ...)
+        conn, cursor = get_mysql_cursor()
+        cursor.execute("UPDATE faculty SET research_interest = %s WHERE name = %s", (new_research_interest, selected_prof))
 
-# Update in MongoDB
-mongo_db.faculty.update_one({"name": selected_prof}, ...)
+        conn.commit()
+        cursor.close()
+        conn.close()
 
-# Update in Neo4j via REST
-requests.post(NEO4J_URL, auth=AUTH, headers=HEADERS, json={...})
+        mongo_db.faculty.update_one({"name": selected_prof}, {"$set": {"researchInterest": new_research_interest}})
+
+
+        cypher = "MATCH (f:FACULTY {name:$name}) SET f.researchInterest=$ri"
+        params = {"name": selected_prof, "ri": new_research_interest}
+        requests.post(NEO4J_URL, auth=AUTH, headers=HEADERS, json={"statements": [{"statement": cypher, "parameters": params}]})
 ```
 
 ## Extra-Credit Capabilities
