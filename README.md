@@ -382,6 +382,7 @@ Foreign key fields were indexed in the MySQL schema to speed up join and aggrega
 ```sql
 CREATE INDEX idx_faculty_university_id ON faculty(university_id);
 ```
+![SQL INDEX](screenshots/sql_index.png)
 
 **Neo4j:**  
 Indexes created for efficient lookup of nodes, particularly on `FACULTY.name` and `PUBLICATION.id`.
@@ -400,7 +401,7 @@ Indexes created for efficient lookup of nodes, particularly on `FACULTY.name` an
 ```cypher
 CREATE INDEX faculty_name_index IF NOT EXISTS FOR (f:FACULTY) ON (f.name);
 ```
-
+![Neo INDEX](screenshots/neo_index.png)
 ---
 
 ### Views (MySQL)
@@ -420,7 +421,7 @@ A MySQL view (`faculty_keyword_summary_view`) summarizes the count of faculty pe
 ```sql
 SELECT keyword, faculty_count FROM faculty_keyword_summary_view WHERE university = %s
 ```
-
+![SQL View](screenshots/sql_view.png)
 ---
 
 ### Constraints (Neo4j)
@@ -443,7 +444,7 @@ Uniqueness constraints in Neo4j ensure that faculty and publication nodes cannot
 CREATE CONSTRAINT unique_faculty_name IF NOT EXISTS 
 FOR (f:FACULTY) REQUIRE f.name IS UNIQUE;
 ```
-
+![NEO CONSTRAINTS](screenshots/neo_constraints.png)
 ---
 
 ### Prepared Statements (MySQL)
