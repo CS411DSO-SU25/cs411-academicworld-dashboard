@@ -421,7 +421,7 @@ A MySQL view (`faculty_keyword_summary_view`) summarizes the count of faculty pe
 ```sql
 SELECT keyword, faculty_count FROM faculty_keyword_summary_view WHERE university = %s
 ```
-![SQL View](screenshots/sql_view.png)
+![SQL View](screenshots/mysql_view.png)
 ---
 
 ### Constraints (Neo4j)
