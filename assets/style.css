@@ -1,0 +1,272 @@
+body {
+    background: #eaf0f7;
+    font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', sans-serif;
+    color: #212529;
+    margin: 0;
+    padding: 0;
+}
+
+.headerbar {
+    background: #eaf0f7;
+    border: 2.5px solid #495a6e;
+    border-radius: 18px;
+    box-shadow: 0 3px 14px #0001;
+    margin: 22px auto 30px auto;
+    max-width: 96vw;
+    padding: 30px 28px 22px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+
+.dashboard-title {
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: bold;
+    font-family: "Georgia", "Times New Roman", serif;
+    color: #222;
+    letter-spacing: 0.5px;
+    margin: 0 0 22px 0;
+    width: 100%;
+    align-items: center;
+    display: block;
+}
+
+/* FILTER BAR */
+.filter-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: transparent;
+    padding: 0;
+    font-size: 0;
+}
+.filter-bar-row > * {
+    font-size: 12px;
+}
+
+.input-dropdown-pair {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 260px;
+    gap: 0;
+    margin: 0 !important;
+}
+
+.search-input {
+    width: 210px;
+    height: 38px;
+    padding: 0 12px;
+    font-size: 12px;
+    font-weight: bold;
+    background: #f6fafd;
+    border: none;
+    border-radius: 7px 0 0 7px;
+    box-sizing: border-box;
+    margin-bottom: 0;
+    outline: none;
+}
+
+.dropdown-btn {
+    width: 48px !important;
+    height: 38px !important;
+    background: #e7eef7 !important;
+    border: none !important;
+    border-radius: 0 7px 7px 0 !important;
+    box-sizing: border-box !important;
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+    cursor: pointer !important;
+    outline: none !important;
+    font-size: 12px !important;
+    font-weight: normal !important;
+    text-align: center !important;
+}
+
+.uni-dropdown {
+    width: 260px !important;
+    height: 38px !important;
+    padding: 0 10px !important;
+    font-size: 12px !important;
+    font-weight: normal !important;
+    background: #f6fafd !important;
+    border: none !important;
+    border-radius: 7px !important;
+    box-sizing: border-box !important;
+    margin-bottom: 0 !important;
+    cursor: pointer !important;
+    margin: 0 8px !important;
+}
+
+.clear-btn {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    height: 38px;
+    border-radius: 7px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: #fff;
+    border: 2px solid #222;
+}
+
+
+#grid, .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 340px);
+    gap: 48px 32px;
+    width: 98vw;
+    margin: 0 auto;
+    margin-bottom: 32px;
+    /* overflow-y: auto; */
+}
+
+.widget {
+    border-radius: 18px;
+    box-shadow: 0 2px 10px #0001;
+    padding: 18px;
+    background: #fff;
+    border: 2px solid #d0d0d0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+#w1-box { border-color: #9852a6; background: #f8f3fa; }
+#w2-box { border-color: #99a55c; background: #f9faec; }
+#w3-box { border-color: #e69a9a; background: #fdf5f5; }
+#w4-box { border-color: #ffe87d; background: #fffbe6; }
+#w5-box { border-color: #4cbeb2; background: #e5faf8; }
+#w6-box { border-color: #6da7d7; background: #fafdff; }
+
+.widget h3, .widget-title {
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: #19324d;
+    font-family: inherit;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+.widget .filters, .widget .subtitle, .widget .filters-bar, .widget .filters-row {
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #236;
+}
+
+.widget .dash-table-container, .dash-table-container {
+    width: 100%;
+    height: 100%;
+}
+
+.dash-table-container .dash-spreadsheet-container {
+    min-height: 90px;
+}
+
+.dash-table-container .dash-table {
+    font-size: 0.97rem;
+    font-family: inherit;
+    border-radius: 8px;
+}
+.dash-table-container .dash-table th, 
+.dash-table-container .dash-table td {
+    white-space: normal;
+}
+.dash-table-container .dash-table th {
+    font-weight: bold;
+    background: #f6fafd;
+}
+
+.dash-table-container .dash-table {
+    border-radius: 12px;
+    overflow: auto;
+    background: #fff;
+}
+
+.dash-table-container .dash-spreadsheet-container::-webkit-scrollbar,
+.dash-table-container .dash-fixed-content::-webkit-scrollbar {
+    width: 8px;
+    background: #eaf0f7;
+}
+.dash-table-container .dash-spreadsheet-container::-webkit-scrollbar-thumb,
+.dash-table-container .dash-fixed-content::-webkit-scrollbar-thumb {
+    background: #aac7e3;
+    border-radius: 8px;
+}
+
+@media (max-width: 1100px) {
+    #grid, .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: unset;
+        gap: 32px 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .headerbar {
+        padding: 16px 4vw 10px 4vw;
+    }
+    .dashboard-title {
+        font-size: 1.45rem;
+    }
+    .filter-bar-row {
+        gap: 6px;
+    }
+    #grid, .grid {
+        gap: 18px 0;
+    }
+    .widget {
+        padding: 9px;
+    }
+}
+
+
+.Select-menu-outer {
+    min-width: 220px !important;
+    width: 260px !important;
+    max-width: 500px !important;
+    white-space: normal !important;
+    z-index: 9999 !important;
+}
+
+.Select__menu {
+    min-width: 220px !important;
+    width: 260px !important;
+    max-width: 500px !important;
+    white-space: normal !important;
+    z-index: 9999 !important;
+}
+
+.widget {
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    border: 2px solid #9852a6;
+    border-radius: 18px;
+    background: #f8f3fa;
+    box-shadow: 0 2px 10px #0001;
+}
+
+.widget-filter {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+#prof-dd .Select__single-value,
+#prof-dd .Select-value-label,
+#prof-dd [class*="singleValue"] {
+    color: transparent !important;
+}
+
+#kw-dd .Select__single-value,
+#kw-dd .Select-value-label,
+#kw-dd [class*="singleValue"] {
+    color: transparent !important;
+}
