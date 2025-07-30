@@ -126,7 +126,7 @@ _The demo covers:_
     - The resulting data is shown in a Dash DataTable, updating live with any change in filters.
 
   - **Information provided:**  
-    For each ranked faculty, you see their name, position, university, specific research interest, and their total keyword-relevant citation count—giving both context and quantitative impact.
+    For each ranked faculty, you see their name, position, university, specific research interest, and their total keyword relevant citation count—giving both context and quantitative impact.
 
   - **Where implemented:**  
     - **File:** `widget1.py`
@@ -279,7 +279,7 @@ _The demo covers:_
 
   - **Why:**  
     Enables users to see at a glance the most impactful work of any faculty member, which is helpful for students seeking advisors, researchers looking for collaborations, or administrators evaluating academic output.  
-    The “Update Research Interests” feature goes beyond read-only reporting, letting users keep research profiles up-to-date automatically using objective publication data—saving time and improving data accuracy.
+    The “Update Research Interests” feature goes beyond read only reporting, letting users keep research profiles up to date automatically using objective publication data saving time and improving data accuracy.
 
   - **How:**  
     - When a faculty member is selected, a parameterized SQL query retrieves their top 10 most cited publications, joining publication and keyword tables for details.
@@ -310,7 +310,7 @@ _The demo covers:_
   Implemented with Dash (Python), providing a modern, interactive web-based dashboard interface.
 - **Backend:**  
   Connects to three databases:
-  - **MySQL:** Stores primary academic data—faculty, universities, publications, keywords, and relationships.
+  - **MySQL:** Stores primary academic data faculty, universities, publications, keywords, and relationships.
   - **MongoDB:** Stores and updates research interests for faculty.
   - **Neo4j:** Used for graph-based queries and visualization, as well as constraints for data integrity.
 
@@ -519,7 +519,7 @@ When a user updates a faculty profile or research interests, those changes are w
     The “Update Research Interests” button in Widget 6 (`widget6.py`, function: `update_research_interests`) triggers updates across all databases.
 
 - **Intelligent and Dynamic Dropdown Menus in the Search Bar:**  
-  The search bar dropdowns automatically filter options based on user input, auto-select when there’s only one match, and enable/disable related dropdowns dynamically. Dropdown choices for keywords, faculty, and universities are context-sensitive and update based on other selections—improving the user experience and making searching faster and less error-prone.
+  The search bar dropdowns automatically filter options based on user input, auto-select when there’s only one match, and enable/disable related dropdowns dynamically. Dropdown choices for keywords, faculty, and universities are context-sensitive and update based on other selections improving the user experience and making searching faster and less error-prone.
   - **Why it’s useful/cool:**  
     Streamlines the search process, avoids invalid selections, and reduces user confusion.
   - **How it was implemented:**  
