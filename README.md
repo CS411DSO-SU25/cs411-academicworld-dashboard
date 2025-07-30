@@ -478,19 +478,18 @@ All MySQL queries use prepared statements, making them safe from SQL injection a
 
 ---
 
-### Cross-Database Synchronization
+### Transaction
 
-When a user updates a faculty profile or research interests, those changes are written to MySQL, MongoDB, and Neo4j.
+Wraps relational updates in an atomic commit so that partial writes never occur before propagating to other stores.
 
-- **Widget using cross-database sync:**  
-  - **Widget 6:** Top 10 Most Cited Publications & Research Interest Update (`widget6.py`, function: `update_research_interests`)
-  - **Widget 4:** Faculty Profile (edit/save actions)
+- **Widget using transactions:**  
+  - **Widget 6:** Top 10 Most Cited Publications & Research Interest Update (`widget6.py`, function: `update_research_interests`)  
 
 - **Why:**  
-  Keeps data consistent across all storage backends essential for an application that both explores and updates academic data.
+  Ensures that the MySQL update either fully succeeds or fails (rollback), preventing inconsistent state if the subsequent MongoDB or Neo4j writes error out.
 
 - **Code Location:**  
-  - Update logic in the respective callback functions in `widget4.py` and `widget6.py`.
+  - In `widget6.py` inside the `update_research_interests` callback  
 
 **Example (Python, from `widget6.py`):**
 ```python
