@@ -23,7 +23,7 @@ A web-based dashboard that helps prospective graduate students and researchers e
 
 ## Demo
 
-[Video Demo: Dashboard to Rule the Academic World][(https://mediaspace.illinois.edu/media/t/1_yr7scyhp)]([https://mediaspace.illinois.edu/media/t/1_1q3x7ti4](https://mediaspace.illinois.edu/media/t/1_orrdfje0))
+[Video Demo: Dashboard to Rule the Academic World][(https://mediaspace.illinois.edu/media/t/1_orrdfje0)]
 
 
 _The demo covers:_
