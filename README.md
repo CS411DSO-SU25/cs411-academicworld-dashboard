@@ -126,7 +126,7 @@ _The demo covers:_
     - The resulting data is shown in a Dash DataTable, updating live with any change in filters.
 
   - **Information provided:**  
-    For each ranked faculty, you see their name, position, university, specific research interest, and their total keyword relevant citation count—giving both context and quantitative impact.
+    For each ranked faculty, you see their name, position, university, specific research interest, and their total keyword relevant citation count giving both context and quantitative impact.
 
   - **Where implemented:**  
     - **File:** `widget1.py`
@@ -487,7 +487,7 @@ When a user updates a faculty profile or research interests, those changes are w
   - **Widget 4:** Faculty Profile (edit/save actions)
 
 - **Why:**  
-  Keeps data consistent across all storage backends—essential for an application that both explores and updates academic data.
+  Keeps data consistent across all storage backends essential for an application that both explores and updates academic data.
 
 - **Code Location:**  
   - Update logic in the respective callback functions in `widget4.py` and `widget6.py`.
@@ -527,7 +527,7 @@ When a user updates a faculty profile or research interests, those changes are w
     
 ## Contributions
 
-- **Justin Hoffman** — jrh10@illinois.edu  
+- **Justin Hoffman**   jrh10@illinois.edu  
   - Sole developer for the project.
   - Designed and implemented the entire dashboard and all six widgets.
   - Developed database access and integration for MySQL, MongoDB, and Neo4j.
