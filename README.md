@@ -149,7 +149,7 @@ _The demo covers:_
     For each year, the bar chart displays the **total number of publications** matching the active filters. This lets users quickly see peaks, trends, or drops in research activity.
 
   - **Why:**  
-    Enables users to visualize how academic interest in specific topics has evolved over time—helpful for identifying emerging research areas, trends in faculty or university productivity, and periods of high scholarly activity. Useful for prospective students, researchers, and academic planners.
+    Enables users to visualize how academic interest in specific topics has evolved over time helpful for identifying emerging research areas, trends in faculty or university productivity, and periods of high scholarly activity. Useful for prospective students, researchers, and academic planners.
 
   - **How:**  
     - On any filter selection, a **parameterized SQL query** is constructed:
@@ -215,7 +215,7 @@ _The demo covers:_
     - Most cited paper (title and year)
 
   - **Why:**  
-    Offers a centralized, comprehensive view of each faculty member—valuable for prospective students seeking an advisor, researchers interested in collaborations, or administrators reviewing academic records. The ability to edit profile details (for authorized users) supports data maintenance and cleaning directly from the dashboard, ensuring accuracy across MySQL, MongoDB, and Neo4j.
+    Offers a centralized, comprehensive view of each faculty member valuable for prospective students seeking an advisor, researchers interested in collaborations, or administrators reviewing academic records. The ability to edit profile details (for authorized users) supports data maintenance and cleaning directly from the dashboard, ensuring accuracy across MySQL, MongoDB, and Neo4j.
 
   - **How:**  
     - When a faculty member is selected, the widget queries MySQL to retrieve profile details, publication stats, and research interests, displaying them in a visually organized card.
@@ -327,7 +327,7 @@ _The demo covers:_
 
 ### Visual Layout
 
-- The dashboard uses a rectangular, grid-based arrangement for widgets, with search/filter controls in a persistent top bar.
+- The dashboard uses a rectangular, grid based arrangement for widgets, with search/filter controls in a persistent top bar.
 - Each widget displays a different aspect of the data and updates dynamically as filters are applied.
 - Custom CSS ensures consistent colors, padding, borders, and responsive layout.
 
