@@ -63,29 +63,31 @@ _The demo covers:_
 ## Installation
 
 1. **Clone the repository:**
-   ```bash
+
    [GitHub Repository](https://github.com/CS411DSO-SU25/cs411-academicworld-dashboard)
+   
+   ```bash
    cd cs411-academicworld-dashboard
    ```
 
-2. **Install Python dependencies:**
+3. **Install Python dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Set up the databases:**
+4. **Set up the databases:**
    - Make sure MySQL, MongoDB, and Neo4j are running on your machine.
    - Import the Academic World dataset provided with your course materials.
 
-4. **Update database credentials if needed:**
+5. **Update database credentials if needed:**
    - If your database connection info (host, username, or password) is different from the defaults in `utils.py`, edit that file to match your setup.
 
-5. **Run the application:**
+6. **Run the application:**
    ```bash
    python app.py
    ```
 
-6. **Open the dashboard in your browser:**
+7. **Open the dashboard in your browser:**
    - Navigate to [http://localhost:8050](http://localhost:8050)
    
 ## Usage
